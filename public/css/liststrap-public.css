@@ -1,0 +1,314 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+ .liststrap-hide{
+    display: none !important;
+}
+/*** Common form style ***/
+
+.liststrap-wrapper .form-group input[type="text"], .liststrap-wrapper .form-group input[type="email"] {
+    border: 2px solid #cfe2f6!important;
+    height: 45px!important;
+    font-weight: 500!important;
+    border-radius: 0px!important;
+    width: 100%!important;
+    padding: 15px 20px!important;
+    outline: none;
+    color: #15232b!important;
+    margin-bottom: 0px!important;
+    background-color: #ffffff!important;
+}
+
+.liststrap-wrapper .form-group input[type="text"]::placeholder, .liststrap-wrapper .form-group input[type="email"]::placeholder {
+    color:#9da6ab;
+    font-size: 14px;
+}
+
+.liststrap-from-submit-btn input[type="submit"] {
+    background-color: #0eac51!important;
+    border: 2px solid #0eac51!important;
+    color: #ffffff!important;
+    font-size: 16px!important;
+    font-weight: 600!important;
+    border-radius: 0px!important;
+    width: 100%!important;
+    line-height: 1.4!important;
+    padding: 8px 20px!important;
+    height: 45px!important;
+    margin-bottom: 0px;
+}
+.liststrap-wrapper {
+    border-top: 8px solid #0eac51;
+    padding: 25px 25px;
+    -webkit-box-shadow: -1px 1px 29px 1px rgba(207,226,246,1);
+    -moz-box-shadow: -1px 1px 29px 1px rgba(207,226,246,1);
+    box-shadow: -1px 1px 29px 1px rgba(207,226,246,1);
+    border-radius: 5px;
+    background-color: #ffffff;
+    clear: both;
+}
+.liststrap-wrapper .form-group input[type="text"]:focus, .liststrap-wrapper .form-group input[type="email"]:focus {
+    border: 2px solid #21b573;
+}
+
+.liststrap-wrapper .liststrap-error,.liststrap_mailchimp_widget .liststrap-error {
+    color: red;
+    font-size: 16px;
+    display: block;
+    font-weight: 600;
+    padding: 10px 0px 0px;
+}
+.liststrap-wrapper .liststrap-name,.liststrap-wrapper .liststrap-email {
+    margin-bottom: 15px!important;
+    display: block;
+    clear: both;
+}
+.liststrap-loader {
+    width: 20px;
+    margin-bottom: 0px!important;
+}
+
+.liststrap-from-submit-btn input[type="submit"]:hover {
+    background-color: transparent!important;
+    color: #0eac51!important;
+    border: 2px solid #0eac51!important;
+    text-decoration: none;
+    box-shadow: none;
+}
+
+.liststrap-from-submit-btn {
+    text-align: center;
+    position: relative;
+}
+
+.liststrap-subscription-form-message-success, #liststrap-widget-subscription-form-message-success{
+    color: green;
+    font-size: 16px;
+    display: block;
+    font-weight: 600;
+    padding: 10px 0px 0px;
+    text-align:center;
+    clear: both;
+}
+
+.liststrap-wrapper .liststrap-loader {
+    position: absolute;
+    right: 10px;
+    top: 13px;
+}
+
+/*** Heading style ***/
+
+.liststrap-wrapper h3 {
+    font-size: 20px!important;
+    margin-bottom: 0px!important;
+    margin-top: 0px!important;
+    padding-bottom: 0px;
+    text-align: left;
+    color: #333333;
+}
+
+/*** Horizontal form style ***/
+
+.liststrap-wrapper-horizontal .liststrap-name, .liststrap-wrapper-horizontal .liststrap-email {
+    padding-right: 15px!important;
+    margin-bottom: 0px!important;
+    vertical-align: top!important;
+    width: 40%;
+    flex: 2;
+}
+
+.liststrap-wrapper-horizontal .liststrap-from-submit-btn {
+    text-align: center;
+    width: 20%;
+    position: relative;
+    flex: 1;
+    margin-bottom: 0px;
+    padding-top: 27px;
+}
+
+.liststrap-wrapper-horizontal .liststrap-from-submit-btn .liststrap-loader {
+    position: absolute;
+    right: 10px;
+    top: 40px;
+    bottom: 0px;
+}
+
+.liststrap-wrapper-horizontal #liststrap-subscription-form {
+    display: flex;
+}
+
+/*** Text show style ***/
+
+.liststrap-wrapper p {
+    font-size: 16px;
+    color: #3c3b3b;
+    margin-bottom: 15px;
+    margin-top: 0px;
+}
+
+/*** Lable style ***/
+
+.liststrap-wrapper .liststrap-name label, .liststrap-wrapper .liststrap-email label {
+    color: #0eac51;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+    line-height: 1.4!important;
+}
+
+/*** Sidebar widget css ***/
+
+.liststrap-widget-wrapper p {
+    font-size: 16px;
+    color: #3c3b3b;
+    margin-bottom: 15px;
+    margin-top: 0px;
+}
+
+.liststrap-widget-label {
+    color: #0eac51;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+    line-height: 1.4!important;
+}
+
+.liststrap-input-widget-form-control {
+    border: 2px solid #cfe2f6!important;
+    height: 45px!important;
+    font-weight: 500!important;
+    border-radius: 0px!important;
+    width: 100%!important;
+    padding: 15px 20px!important;
+    outline: none;
+    color: #15232b!important;
+    margin-bottom: 0px!important;
+    background-color: #ffffff!important;
+}
+
+.liststrap-widget-form-container .liststrap-widget-name,.liststrap-widget-form-container .liststrap-widget-email {
+    margin-bottom: 15px!important;
+    float: left;
+    width: 100%;
+}
+
+#liststrap-widget-from-submit {
+    background-color: #0eac51!important;
+    border: 2px solid #0eac51!important;
+    color: #ffffff!important;
+    font-size: 16px!important;
+    font-weight: 600!important;
+    border-radius: 0px!important;
+    width: 100%!important;
+    line-height: 1.4!important;
+    padding: 8px 20px!important;
+    height: 45px!important;
+    margin-bottom: 0px;
+    transition: 0.3s;
+}
+
+.liststrap_mailchimp_widget {
+    border-top: 8px solid #0eac51!important;
+    padding: 20px 20px!important;
+    -webkit-box-shadow: -1px 1px 29px 1px rgb(207 226 246);
+    -moz-box-shadow: -1px 1px 29px 1px rgba(207,226,246,1);
+    box-shadow: -1px 1px 29px 1px rgb(207 226 246);
+    border-radius: 5px;
+    background-color: #ffffff;
+    clear: both;
+    float: left;
+}
+
+.liststrap-widget-heading-wrapper .widget-title {
+    margin-bottom: 0px!important;
+}
+
+.liststrap-wrapper-widget-horizontal .liststrap-widget-form-container .liststrap-widget-name, .liststrap-wrapper-widget-horizontal .liststrap-widget-form-container .liststrap-widget-email {
+    padding-right: 15px!important;
+    margin-bottom: 0px!important;
+    vertical-align: top!important;
+    width: 40%;
+    flex: 2;
+}
+
+.liststrap-wrapper-widget-horizontal .liststrap-widget-form-container{
+    display: flex;
+}
+
+.liststrap-wrapper-widget-horizontal .liststrap-widget-from-submit-btn{
+    text-align: center;
+    width: 20%;
+    position: relative;
+    flex: 1;
+    margin-bottom: 0px;
+    padding-top: 27px;
+}
+
+#liststrap-widget-from-submit:hover {
+    background-color: transparent!important;
+    color: #0eac51!important;
+    border: 2px solid #0eac51!important;
+    text-decoration: none;
+    box-shadow: none;
+    transition: 0.3s;
+}
+
+.liststrap-widget-wrapper .liststrap-loader{
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    bottom: 0px;
+}
+
+.liststrap-wrapper-widget-horizontal .liststrap-loader.liststrap-hide.liststrap-widget-from-submit-btn-cls{
+    top: 40px;
+}
+
+.liststrap-sidebar-widget-subscription-form-message-success {
+    color: green;
+    font-size: 16px;
+    display: block;
+    font-weight: 600;
+    padding: 10px 0px 0px;
+    text-align: center;
+    clear: both;
+}
+
+#liststrap-widget-from-submit-btn {
+    position: relative;
+    display: block;
+    clear: both;
+}
+
+/*** Media Query ***/
+
+@media only screen and (max-width: 997px) {
+.liststrap-wrapper-horizontal .liststrap-name, .liststrap-wrapper-horizontal .liststrap-email {
+    display:block;
+    width: 100%;
+    margin-bottom: 15px!important;
+    padding-right: 0px!important;
+    text-align: left;
+}
+.liststrap-wrapper-horizontal .liststrap-from-submit-btn{
+    width: 100%;
+    display:block;
+    padding-top: 0px;
+} 
+.liststrap-wrapper-horizontal #liststrap-subscription-form {
+    display: block;
+} 
+.liststrap-wrapper-horizontal .liststrap-from-submit-btn .liststrap-loader {
+    top: 13px;
+}
+}
+
+@media only screen and (max-width: 480px) {
+.liststrap-wrapper {
+    padding: 20px 20px;
+}   
+}

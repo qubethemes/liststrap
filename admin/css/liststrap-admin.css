@@ -1,0 +1,269 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+.liststrap-setting-list {
+    border: 1px solid #dcdcdc;
+    margin-top: 10px;
+}
+.liststrap-setting-list ul.tabs{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+
+}
+.liststrap-setting-list ul.tabs li{
+    background: none;
+    color: #222;
+    display: inline-block;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+.liststrap-setting-list ul.tabs li.current{
+    background: #fff;
+    color: #222;
+}
+.liststrap-setting-list .tab-content{
+    display: none;
+    background: #fff;
+    padding: 25px 20px;
+    border-top: 1px solid #dcdcdc;
+}
+.liststrap-setting-list .tab-content.current{
+    display: inherit;
+}
+.liststrap-hide{
+    display: none !important;
+}
+input.error {
+    border: 1px solid #f70101;
+}
+.form-control {
+    box-shadow: none;
+    outline: 0;
+    height: 36px;
+    width: 50%;
+    padding: 5px;
+    font-size: 14px;
+    font-family: sans-serif;
+    color: #000;
+    border-radius: 3px;
+    border: 1px solid #999d;
+}
+.form-group label {
+    font-size: 15px;
+    font-family: system-ui;
+    font-weight: 500;
+    display: block;
+    width: 100%;
+    padding-bottom: 5px;
+    color: #23282d;
+}
+.form-group {
+    margin-top: 15px;
+    padding-left: 6px;
+}
+.liststrap-setting .tab-content {
+    background: #ffffff;
+    padding: 0 20px 15px;
+}
+input[type=text] {
+    padding: 0 8px;
+    line-height: 2;
+    min-height: 30px;
+    font-size: 13px;
+    color: #040404;
+}
+button.liststrap_from_submit_btn {
+    margin-top: 20px;
+    margin-left: 2px;
+}
+div#liststrap-setting {
+    color: #0b540b;
+    margin-top: 10px;
+}
+button.liststrap_from_submit_btn:hover {
+    background-color: #0073aa;
+    transition: 0.5s;
+}
+button.liststrap_from_submit_btn {
+    background-color: black;
+    border: 1px solid #cdcdcd;
+    border-radius: 4px;
+    padding: 10px 30px;
+    line-height: 16px;
+    color: #fff;
+    font-family: system-ui;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: none !important;
+    outline: 0 !important;
+    cursor: pointer;
+    margin-left: 8px;
+}
+.form-group::placeholder{
+    color: #797979;
+}
+img.LoderImg{
+    position: absolute;
+    width: 15px;
+    right: 10px;
+    top: 10px;
+}
+span.status.positive {
+    color: #ffff;
+    background-color: #0eac51;
+    padding: 4px 8px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+}
+span.status.neutral {
+    color: #ffff;
+    background-color: #808080;
+    padding: 3px 6px;
+    color: #fff;
+    font-weight: 700;
+}
+div#liststrap-setting-message-success, div#liststrap-lists-message-success {
+    color: #0b540b;
+    margin-top: 10px;
+    width: 100%;
+}
+div#liststrap-setting-message-error, div#liststrap-lists-message-error {
+    color: #dc0606;
+    margin-top: 10px;
+    text-align: center;
+}
+.tab-content.current[data-tab="liststrap-lists"] > .form-group.w-50.float-left {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-column-gap: 20px;
+}
+.liststrap-setting-list .tabs li.current {
+    background-color: #0eac51!important;
+    color: #ffffff!important;
+}
+
+.liststrap-setting-list .tabs li {
+    font-size: 17px;
+    padding: 16px 20px!important;
+}
+
+.liststrap-setting-list .tabs {
+    background-color: #ffffff;
+}
+
+.liststrap-setting-list .form-group label {
+    font-size: 17px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    color: #000000;
+    display: inline-block;
+    width: 170px;
+    text-align: left;
+}
+
+.liststrap-setting-list .form-group input[type="text"] {
+    border: 2px solid #cfe2f6;
+    height: 45px;
+    padding: 15px;
+    font-size: 15px;
+    color: #333333;
+    display: inline-block;
+    width: calc(100% - 172px);
+}
+
+.liststrap-setting-list .form-group a{
+    margin-top:10px;
+    display: block;
+    font-size: 15px;
+    text-align: right;
+}
+.liststrap-setting-list .form-group select {
+    height: 45px;
+    width: 100%;
+    max-width: 100%;
+    border: 2px solid #cfe2f6;
+    font-size: 15px;
+    padding: 0px 15px;
+    color: #333333;
+    width: calc(100% - 172px);
+}
+
+#liststrap-from-submit {
+    background-color: #0eac51!important;
+    border: 2px solid #0eac51!important;
+    color: #ffffff!important;
+    font-size: 18px!important;
+    font-weight: 600!important;
+    width: calc(100% - 172px);
+    line-height: 1.2!important;
+    padding: 8px 20px!important;
+    height: 45px!important;
+    margin-bottom: 0px;
+}
+
+.liststrap-setting-list .form-group {
+    margin-top: 26px;
+    padding: 0px;
+    position: relative;
+}
+
+.liststrap-loader {
+    width: 20px;
+    margin-bottom: 0px!important;
+    margin: 0px auto 0px;
+    position: absolute;
+    top: 12px;
+    right: 10px;
+}
+
+.liststrap-setting-message-success{
+    color: green;
+    font-size: 16px;
+    display: block;
+    font-weight: 600;
+    padding: 0px 10px 0px;
+    text-align:center;
+}
+
+.liststrap-error {
+    color: red;
+    font-size: 16px;
+    display: block;
+    font-weight: 600;
+    padding: 0px 10px 0px;
+}
+
+#liststrap-setting {
+    width: 60%;
+}
+
+.liststrap-from-submit-btn {
+    text-align: right;
+}
+
+/*** Media Query ***/
+
+@media only screen and (max-width: 997px) {
+#liststrap-setting {
+    width: 100%;
+}
+}
+
+@media only screen and (max-width: 767px) {
+.liststrap-setting-list .form-group label {
+    width: 100%;
+}   
+.liststrap-setting-list .form-group input[type="text"] {
+    width: 100%;
+}
+.liststrap-setting-list .form-group select {
+    width: 100%;
+}
+#liststrap-from-submit {
+    width: 100%;
+}
+}
