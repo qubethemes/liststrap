@@ -271,7 +271,7 @@ class Liststrap_Public {
 	 */
 	public function liststrap_front_form($atts){
 		$output = $data = '';
-		$liststrap_admin = new Liststrap_Admin($plugin_name, $version);
+		$liststrap_admin = new Liststrap_Admin($this->plugin_name, $this->version);
 		$data = $this->liststrap_form_field_data($atts);
 		$liststrap_form = $liststrap_admin->liststrap_form($data, $side = '');
 		$output = $liststrap_form;
@@ -382,7 +382,7 @@ class Liststrap_Public {
     		endforeach;
     	endif;
     	$liststrap_form_id = !empty( $_POST['liststrap_form_id'] ) ? sanitize_text_field( $_POST['liststrap_form_id'] ) : '';
-		$liststrap_admin = new Liststrap_Admin($plugin_name, $version);
+		$liststrap_admin = new Liststrap_Admin($this->plugin_name, $this->version);
 		$liststrapadmin = $liststrap_admin->liststrap_get_mailchimp_data();
 		$api_key = !empty( $liststrapadmin['api_key'] ) ? $liststrapadmin['api_key'] : '';
 		$listid = !empty( $liststrapadmin['lists'] ) ? $liststrapadmin['lists'] : '';
