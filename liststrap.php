@@ -9,14 +9,14 @@
  * that starts the plugin.
  *
  * @link              https://qubethemes.com/
- * @since             1.0.1
+ * @since             1.0.0
  * @package           Liststrap
  *
  * @wordpress-plugin
  * Plugin Name:       ListStrap
  * Plugin URI:        https://qubethemes.com/
  * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            qubethemes
  * Author URI:        https://profiles.wordpress.org/qubethemes
  * License:           GPL-2.0+
