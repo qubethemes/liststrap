@@ -12,12 +12,12 @@
  * @subpackage Liststrap/public/partials
  */
 
-class Liststrap_Mailchimp_Widget extends WP_Widget {   
+class Liststrap_Mailchimp_Widget extends WP_Widget {
 	function __construct() {
 		$widget_ops = array('classname' => 'liststrap_mailchimp_widget', 'description' => __( 'Liststrap mailchimp widget.', 'liststrap') );
-		parent::__construct('liststrap-mailchimp', __('Liststrap Mailchimp', 'liststrap'), $widget_ops );        
+		parent::__construct('liststrap-mailchimp', __('Liststrap Mailchimp', 'liststrap'), $widget_ops );
 	}
-    
+
     /**
      * Liststrap widget public form
      */
@@ -39,12 +39,12 @@ class Liststrap_Mailchimp_Widget extends WP_Widget {
  			$liststrap_text_show = '';
  			$liststrap_form_text = '';
 		endif;
-		if( !empty( $instance['liststrap_name_field_show'] ) && $instance['liststrap_name_field_show'] == 'yes' ) : 
+		if( !empty( $instance['liststrap_name_field_show'] ) && $instance['liststrap_name_field_show'] == 'yes' ) :
 			$liststrap_name_field_show = true;
 	    else :
 	    	$liststrap_name_field_show = '';
 	    endif;
-	    if( !empty( $instance['liststrap_label_show'] ) && $instance['liststrap_label_show'] == 'yes' ) : 
+	    if( !empty( $instance['liststrap_label_show'] ) && $instance['liststrap_label_show'] == 'yes' ) :
 			$liststrap_label_show = true;
 	    else :
 	    	$liststrap_label_show = '';
@@ -60,7 +60,7 @@ class Liststrap_Mailchimp_Widget extends WP_Widget {
 				$ouput.= do_shortcode('[liststrap-shortcode liststrap-form-style="' . esc_attr( $liststrap_form_style ) . '" liststrap-widget-location="' . esc_attr( $liststrap_widget_location ) . '" liststrap-text-show="' . esc_attr( $liststrap_text_show ) . '" liststrap-form-text="' . esc_attr( $liststrap_form_text ) . '" liststrap-name-title="' . esc_attr( $liststrap_name_title ) . '" liststrap-name-placeholder="' . esc_attr( $liststrap_name_placeholder ) . '" liststrap-email-title="' . esc_attr( $liststrap_email_title ) . '" liststrap-email-placeholder="' . esc_attr( $liststrap_email_placeholder ) . '" liststrap-name-field-show="' . esc_attr( $liststrap_name_field_show ) . '" liststrap-label-show="' . esc_attr( $liststrap_label_show ) . '" liststrap-submit-button="' . esc_attr( $liststrap_submit_button_text ) . '" liststrap-widget="true"]');
 	    $ouput .= '</div>';
 		$ouput .= $after_widget;
-		echo __( $ouput ); 
+		echo  $ouput;
 	}
 
 	/**
@@ -73,7 +73,7 @@ class Liststrap_Mailchimp_Widget extends WP_Widget {
 		}
 		if ( !empty( $new_instance['subtitle'] ) ) {
 			$instance['subtitle'] = sanitize_text_field( $new_instance['subtitle'] );
-		}	
+		}
 		if ( !empty( $new_instance['liststrap_form_style'] ) ) {
 			$instance['liststrap_form_style'] = sanitize_text_field( $new_instance['liststrap_form_style'] );
 		}
@@ -91,7 +91,7 @@ class Liststrap_Mailchimp_Widget extends WP_Widget {
 		}
 		if ( !empty( $new_instance['liststrap_email_placeholder'] ) ) {
 			$instance['liststrap_email_placeholder'] = sanitize_text_field( $new_instance['liststrap_email_placeholder'] );
-		}	
+		}
 		if ( !empty( $new_instance['liststrap_name_field_show'] ) ) {
 			$instance['liststrap_name_field_show'] = sanitize_text_field( $new_instance['liststrap_name_field_show'] );
 		}
@@ -100,14 +100,14 @@ class Liststrap_Mailchimp_Widget extends WP_Widget {
 		}
 		if ( !empty( $new_instance['liststrap_submit_button_text'] ) ) {
 			$instance['liststrap_submit_button_text'] = sanitize_text_field( $new_instance['liststrap_submit_button_text'] );
-		}		
+		}
 		return $instance;
 	}
 
 	/**
 	 * Liststrap widget admin form
-	 */	
-    function form( $instance ) {	  
+	 */
+    function form( $instance ) {
 	   $output = '';
 	   $title = isset( $instance['title'] ) ? $instance['title'] : '';
 	   $subtitle = isset( $instance['subtitle'] ) ? $instance['subtitle'] : '';
@@ -126,7 +126,7 @@ class Liststrap_Mailchimp_Widget extends WP_Widget {
 	   $output .= '<p>';
 	   $output .= '<label for="' . esc_attr( $this->get_field_id( 'title' ) ) . '">' . esc_html__( 'Title:', 'liststrap' ) . '</label>';
 	   $output .= '<input class="widefat" id="' . esc_attr( $this->get_field_id( 'title' ) ) . '" name="' . esc_attr( $this->get_field_name( 'title' ) ) . '" type="text" value="' . esc_attr( $title ) . '" />';
-	   $output .= '</p>'; 
+	   $output .= '</p>';
 	   $output .= '<p>';
 	   $output .= '<label for="' . esc_attr( $this->get_field_id( 'subtitle' ) ) . '">' . esc_html__( 'Sub Title:', 'liststrap' ) . '</label>';
 	   $output .= '<input class="widefat" id="' . esc_attr( $this->get_field_id( 'subtitle' ) ) . '" name="' . esc_attr( $this->get_field_name( 'subtitle' ) ) . '" type="text" value="' . esc_attr( $subtitle ) . '" />';
@@ -140,7 +140,7 @@ class Liststrap_Mailchimp_Widget extends WP_Widget {
 		   		endforeach;
 		   	endif;
 	   $output .= '</select>';
-	   $output .= '</p>'; 
+	   $output .= '</p>';
 	   $output .= '<p>';
 	   $output .= '<label for="' . esc_attr( $this->get_field_id( 'liststrap_widget_location' ) ) . '">' . esc_html__( 'Form Location:', 'liststrap' ) . '</label>';
 	   $output .= '<select class="widefat" id="' . esc_attr( $this->get_field_id( 'liststrap_widget_location' ) ) . '" name="' . esc_attr( $this->get_field_name( 'liststrap_widget_location' ) ) . '">';
@@ -150,23 +150,23 @@ class Liststrap_Mailchimp_Widget extends WP_Widget {
 		   		endforeach;
 		   	endif;
 	   $output .= '</select>';
-	   $output .= '</p>'; 
+	   $output .= '</p>';
 	   $output .= '<p>';
 	   $output .= '<label for="' . esc_attr( $this->get_field_id( 'liststrap_name_title' ) ) . '">' . esc_html__( 'Label for name field:', 'liststrap' ) . '</label>';
 	   $output .= '<input class="widefat" id="' . esc_attr( $this->get_field_id( 'liststrap_name_title' ) ) . '" name="' . esc_attr( $this->get_field_name( 'liststrap_name_title' ) ) . '" type="text" value="' . esc_attr( $liststrap_name_title ) . '" />';
-	   $output .= '</p>';  
+	   $output .= '</p>';
 	   $output .= '<p>';
 	   $output .= '<label for="' . esc_attr( $this->get_field_id( 'liststrap_name_placeholder' ) ) . '">' . esc_html__( 'Placeholder for name field:', 'liststrap' ) . '</label>';
 	   $output .= '<input class="widefat" id="' . esc_attr( $this->get_field_id( 'liststrap_name_placeholder' ) ) . '" name="' . esc_attr( $this->get_field_name( 'liststrap_name_placeholder' ) ) . '" type="text" value="' . esc_attr( $liststrap_name_placeholder ) . '" />';
-	   $output .= '</p>'; 
+	   $output .= '</p>';
 	   $output .= '<p>';
 	   $output .= '<label for="' . esc_attr( $this->get_field_id( 'liststrap_email_title' ) ) . '">' . esc_html__( 'Label for email field:', 'liststrap' ) . '</label>';
 	   $output .= '<input class="widefat" id="' . esc_attr( $this->get_field_id( 'liststrap_email_title' ) ) . '" name="' . esc_attr( $this->get_field_name( 'liststrap_email_title' ) ) . '" type="text" value="' . esc_attr( $liststrap_email_title ) . '" />';
-	   $output .= '</p>'; 
+	   $output .= '</p>';
 	   $output .= '<p>';
 	   $output .= '<label for="' . esc_attr( $this->get_field_id( 'liststrap_email_placeholder' ) ) . '">' . esc_html__( 'Placeholder for email field:', 'liststrap' ) . '</label>';
 	   $output .= '<input class="widefat" id="' . esc_attr( $this->get_field_id( 'liststrap_email_placeholder' ) ) . '" name="' . esc_attr( $this->get_field_name( 'liststrap_email_placeholder' ) ) . '" type="text" value="' . esc_attr( $liststrap_email_placeholder ) . '" />';
-	   $output .= '</p>'; 
+	   $output .= '</p>';
 	   $output .= '<p>';
 	   $output .= '<label for="' . esc_attr( $this->get_field_id( 'liststrap_name_field_show' ) ) . '">' . esc_html__( 'Name field Hide / Show:', 'liststrap' ) . '</label>';
 	   $output .= '<select class="widefat" id="' . esc_attr( $this->get_field_id( 'liststrap_name_field_show' ) ) . '" name="' . esc_attr( $this->get_field_name( 'liststrap_name_field_show' ) ) . '">';
@@ -176,7 +176,7 @@ class Liststrap_Mailchimp_Widget extends WP_Widget {
 		   		endforeach;
 		   	endif;
 	   $output .= '</select>';
-	   $output .= '</p>'; 
+	   $output .= '</p>';
 	   $output .= '<p>';
 	   $output .= '<label for="' . esc_attr( $this->get_field_id( 'liststrap_label_show' ) ) . '">' . esc_html__( 'Label Hide / Show:', 'liststrap' ) . '</label>';
 	   $output .= '<select class="widefat" id="' . esc_attr( $this->get_field_id( 'liststrap_label_show' ) ) . '" name="' . esc_attr( $this->get_field_name( 'liststrap_label_show' ) ) . '">';
@@ -190,7 +190,7 @@ class Liststrap_Mailchimp_Widget extends WP_Widget {
 	   $output .= '<p>';
 	   $output .= '<label for="' . esc_attr( $this->get_field_id( 'liststrap_submit_button_text' ) ) . '">' . esc_html__( 'Submit Button Text:', 'liststrap' ) . '</label>';
 	   $output .= '<input class="widefat" id="' . esc_attr( $this->get_field_id( 'liststrap_submit_button_text' ) ) . '" name="' . esc_attr( $this->get_field_name( 'liststrap_submit_button_text' ) ) . '" type="text" value="' . esc_attr( $liststrap_submit_button_text ) . '" />';
-	   $output .= '</p>'; 	   
+	   $output .= '</p>';
 	   printf( $output );
 	}
 }

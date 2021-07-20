@@ -194,7 +194,7 @@ class Liststrap_Admin {
 					        $output .= $this->liststrap_shortcode_lists_page(); 
 			$output .= '</div>  
 					</div>';
-	    echo __( $output );
+	    echo  $output;
 	}
 
 	/**
