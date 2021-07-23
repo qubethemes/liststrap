@@ -15,8 +15,8 @@
  * @wordpress-plugin
  * Plugin Name:       ListStrap
  * Plugin URI:        https://qubethemes.com/
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
- * Version:           1.0.1
+ * Description:       Use Liststrap to integrate Mailchimp signup forms into your WordPress site without trouble.
+ * Version:           1.0.2
  * Author:            qubethemes
  * Author URI:        https://profiles.wordpress.org/qubethemes
  * License:           GPL-2.0+
